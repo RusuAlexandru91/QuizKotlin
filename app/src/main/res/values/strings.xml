@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">QuizKotlin</string>
+    <string name="addName">1. Please add your name below</string>
+    <string name="nameHintEditText">Name</string>
+    <string name="surveyTitle">Survey</string>
+    <string name="textTitleDescription">This is a survey regarding internet usage</string>
+    <string name="genderMessage">2. Please select your gender :</string>
+    <string name="maleRadioButton">Male</string>
+    <string name="femaleRadioButton">Female</string>
+    <string name="educationTextView">3. Please select your edication level :</string>
+    <string name="middle_school">Middle School</string>
+    <string name="high_school">High School</string>
+    <string name="collage">Collage</string>
+    <string name="more_then_collage">More then collage</string>
+    <string name="devicesTextView">4. What devices do you use ?</string>
+    <string name="smartphone">Smartphone</string>
+    <string name="laptop_pc">Laptop / Pc</string>
+    <string name="tablet">Tablet</string>
+    <string name="smart_tv">Smart Tv</string>
+    <string name="timeTextView">5. How many H do you spend online ?</string>
+    <string name="incrementButton">+</string>
+    <string name="timeDisplay">1</string>
+    <string name="decrementButton">-</string>
+    <string name="platformTextView">6. Please select your most used platforms !</string>
+    <string name="youtube">Youtube</string>
+    <string name="netflix">Netflix</string>
+    <string name="instagram">Instagram</string>
+    <string name="facebook">Facebook</string>
+    <string name="submitButton">Submit</string>
+</resources>
