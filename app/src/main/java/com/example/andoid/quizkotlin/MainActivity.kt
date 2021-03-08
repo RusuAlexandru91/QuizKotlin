@@ -124,7 +124,7 @@ class MainActivity : AppCompatActivity() {
         return education
     }
 
-    // Create resultus to be displayed
+    // Create resultus to be displayed 2
     private fun createResults(name: String, gender: String, education: String, device: String, time: Int, platform: String): String {
         var result = "1. Name: $name"
         result += "\n\n2. Gender: $gender"
