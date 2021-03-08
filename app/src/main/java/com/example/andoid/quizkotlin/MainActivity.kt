@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+
 class MainActivity : AppCompatActivity() {
     private var quantity: Int = 1
 
@@ -14,14 +15,20 @@ class MainActivity : AppCompatActivity() {
 
         // Listener for increment
         incrementButton.setOnClickListener {
-            if (quantity == 10) { Toast.makeText(this, "Max value 10H", Toast.LENGTH_SHORT).show() }
-            else { quantity++ }
+            if (quantity == 10) {
+                Toast.makeText(this, "Max value 10H", Toast.LENGTH_SHORT).show()
+            } else {
+                quantity++
+            }
             display(quantity)
         }
         // Listener for decrement
         decrementButton.setOnClickListener {
-            if (quantity == 1) { Toast.makeText(this, "Min value 1H", Toast.LENGTH_SHORT).show() }
-            else { quantity-- }
+            if (quantity == 1) {
+                Toast.makeText(this, "Min value 1H", Toast.LENGTH_SHORT).show()
+            } else {
+                quantity--
+            }
             display(quantity)
         }
         // Listener for submitButton
@@ -40,6 +47,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent.createChooser(intent, "Send Email using:"))
         }
     }
+
     // Get platform
     private fun getPlatform(): String {
         var platform = "6. Platforms used: "
@@ -48,13 +56,22 @@ class MainActivity : AppCompatActivity() {
         val isFacebook: Boolean = facebookCheckBox.isChecked
         val isInstagram: Boolean = instagramCheckBox.isChecked
 
-        if (isYoutube) { platform += "\nYoutubee" }
-        if (isNetflix) { platform += "\n Netflix" }
-        if (isFacebook) { platform += "\n Facebook" }
-        if (isInstagram) { platform += "\n Instagram" }
+        if (isYoutube) {
+            platform += "\nYoutubee"
+        }
+        if (isNetflix) {
+            platform += "\n Netflix"
+        }
+        if (isFacebook) {
+            platform += "\n Facebook"
+        }
+        if (isInstagram) {
+            platform += "\n Instagram"
+        }
 
         return platform
     }
+
     // Get devices
     private fun getDevice(): String {
         var device = "4. Devices used: "
@@ -64,13 +81,22 @@ class MainActivity : AppCompatActivity() {
         val isTablet: Boolean = tabletCheckBox.isChecked
         val isTv: Boolean = TvcheckBox.isChecked
 
-        if (isSmartphone) { device += "\nSmartphone" }
-        if (isLaptop) { device += "\n Laptop/Pc" }
-        if (isTablet) { device += "\n Tablet" }
-        if (isTv) { device += "\n Smart Tv" }
+        if (isSmartphone) {
+            device += "\nSmartphone"
+        }
+        if (isLaptop) {
+            device += "\n Laptop/Pc"
+        }
+        if (isTablet) {
+            device += "\n Tablet"
+        }
+        if (isTv) {
+            device += "\n Smart Tv"
+        }
 
         return device
     }
+
     //This method displays the given quantity value on the screen.
     private fun display(number: Int): Int {
         quantity_text_view.text = "$number"
@@ -78,26 +104,25 @@ class MainActivity : AppCompatActivity() {
     }
    // Get gender
     private fun getGender(): String {
-        val genderSelected: String
-        when (genderRadioGroup.checkedRadioButtonId) {
-            R.id.maleRadioButton -> genderSelected = "Male"
-            R.id.femaleRadioButton -> genderSelected = "Female"
-            else -> genderSelected = "Not provided"
+        val genderSelected: String = when (genderRadioGroup.checkedRadioButtonId) {
+            R.id.maleRadioButton ->  "Male"
+            R.id.femaleRadioButton -> "Female"
+            else -> "Not provided"
         }
         return genderSelected
     }
     // Get education
     private fun getEducation(): String {
-        val education: String
-        when (educationRadioGroup.checkedRadioButtonId) {
-            R.id.middleSchoolRadioButton -> education = "Middle School"
-            R.id.hightSchoolRadioButton -> education = "High School"
-            R.id.collageRadioButton -> education = "Collage"
-            R.id.moreThenRadioButton -> education = "More then Collage"
-            else -> education = "Not provided"
+        val education: String = when (educationRadioGroup.checkedRadioButtonId) {
+            R.id.middleSchoolRadioButton -> "Middle School"
+            R.id.hightSchoolRadioButton -> "High School"
+            R.id.collageRadioButton -> "Collage"
+            R.id.moreThenRadioButton -> "More then Collage"
+            else -> "Not provided"
         }
         return education
     }
+
     // create resultus to be displayed
     private fun createResults(name: String, gender: String, education: String, device: String, time: Int, platform: String): String {
         var result = "1. Name: $name"
