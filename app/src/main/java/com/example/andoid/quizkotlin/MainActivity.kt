@@ -102,6 +102,7 @@ class MainActivity : AppCompatActivity() {
         quantity_text_view.text = "$number"
         return number
     }
+
    // Get gender
     private fun getGender(): String {
         val genderSelected: String = when (genderRadioGroup.checkedRadioButtonId) {
@@ -123,7 +124,7 @@ class MainActivity : AppCompatActivity() {
         return education
     }
 
-    // create resultus to be displayed
+    // Create resultus to be displayed
     private fun createResults(name: String, gender: String, education: String, device: String, time: Int, platform: String): String {
         var result = "1. Name: $name"
         result += "\n\n2. Gender: $gender"
